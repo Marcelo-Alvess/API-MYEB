@@ -9,9 +9,10 @@
     "removeComments": true,
     // "strict": true,
     "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
+      "./src/@types",
+      "./node_modules/@types"
     ],
+    "strictPropertyInitialization": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
