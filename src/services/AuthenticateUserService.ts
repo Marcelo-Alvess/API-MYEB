@@ -16,15 +16,14 @@ class AuthenticateUserService {
             email_user
         });
 
-        const passwordMatch = await compare(password_user, user.password_user)
+        const passwordMatch = await compare(password_user, user.password_user);
 
         if(passwordMatch) {
-
             const token = sign({
                 email_user: user.email_user
             }, "e7aefb0d6e04a2fbdde5e9ecd01cb72d", {
                 subject: user.id,
-                expiresIn: "1d"
+                expiresIn: "20s"
             });
             
             return token;
